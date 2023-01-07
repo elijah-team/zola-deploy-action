@@ -1,10 +1,12 @@
 # Zola Deploy Action
 
+<!--
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fshalzz%2Fzola-deploy-action%2Fbadge&style=flat)](https://actions-badge.atrox.dev/shalzz/zola-deploy-action/goto)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/shalzz/zola-deploy-action?sort=semver)
+-->
 
 A GitHub action to automatically build and deploy your [zola] site to the master
-branch as GitHub Pages.
+branch as GitHub Pages using version 0.13.0.
 
 ## Table of Contents
 
@@ -32,7 +34,7 @@ jobs:
     - name: Checkout main
       uses: actions/checkout@v3.0.0
     - name: Build and deploy
-      uses: shalzz/zola-deploy-action@v0.16.1
+      uses: elijah-team/zola-deploy-action@v0.16.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -56,7 +58,7 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v3.0.0
       - name: Build only 
-        uses: shalzz/zola-deploy-action@v0.16.1
+        uses: elijah-team/zola-deploy-action@v0.16.1
         env:
           BUILD_DIR: docs
           BUILD_ONLY: true
@@ -71,7 +73,7 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v3.0.0
       - name: Build and deploy
-        uses: shalzz/zola-deploy-action@v0.16.1
+        uses: elijah-team/zola-deploy-action@v0.16.1
         env:
           BUILD_DIR: docs
           PAGES_BRANCH: gh-pages
